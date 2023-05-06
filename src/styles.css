@@ -1,0 +1,167 @@
+:root {
+  --color-primary: #f0cea0;
+  --color-secondary: #534d41;
+  --color-secondary-shade: #534d41dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: Georgia;
+  margin-inline: 0;
+}
+
+/*  -- APP -- */
+.app__title {
+  text-align: center;
+}
+
+/* -- NAVBAR -- */
+.navbar {
+  padding-inline: 10px;
+  border-bottom: 1px solid var(--color-secondary);
+  padding-bottom: 10px;
+}
+
+.navbar__logo {
+  margin: 0;
+}
+
+/* --  SEARCH --  */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.search__search-bar {
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.search__search-bar:active,
+.search__search-bar:focus {
+  outline: 3px solid var(--color-secondary);
+}
+
+.search__btns-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search__btn {
+  border-radius: 30px;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  color: white;
+}
+
+.search__submit-btn {
+  background-color: var(--color-secondary);
+}
+
+.search__submit-btn:hover {
+  background-color: var(--color-secondary-shade);
+}
+
+.search__submit-btn:active {
+  background-color: var(--color-secondary);
+}
+
+.search__clear-btn {
+  background-color: red;
+}
+
+.search__clear-btn:hover {
+  background-color: rgba(255, 0, 0, 0.649);
+}
+
+.search__clear-btn:active {
+  background-color: red;
+}
+
+.search__query {
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* -- RESULTS -- */
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+/* -- WORD -- */
+.word {
+  border: 1px solid var(--color-secondary);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-secondary-shade);
+  color: white;
+  width: 100%;
+}
+
+.meaning {
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.meaning:last-of-type {
+  border-bottom: none;
+}
+
+.meaning__partOfSpeech {
+  font-size: 1rem;
+}
+
+.meaning__synonyms li {
+  list-style-position: inside;
+  list-style: '- ';
+}
+
+/* -- MEDIA QUERIES -- */
+
+@media screen and (min-width: 500px) {
+  .word {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .search {
+    width: 50%;
+  }
+
+  .search__search-bar {
+    padding: 20px;
+  }
+
+  .search__btn {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .search__btns-container {
+    flex-direction: row;
+  }
+}
